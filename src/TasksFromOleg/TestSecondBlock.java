@@ -1,22 +1,27 @@
 package TasksFromOleg;
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.EnumSet;
+
 class TestSecondBlock {
 
+    void name() {
+        System.out.println("Hello");
+    }
+}
+
+class Test {
+
+
+    TestSecondBlock t1 = new TestSecondBlock() {
+
+        @Override
+        void name() {
+            System.out.println("Kick");
+        }
+    };
 
     public static void main(String[] args) {
-
-        String s1 = new String (" abcd efgabcd ");
-
-
-
-
+        Test t2 = new Test();
+        t2.t1.name();
 
 
     }
-
-
-
-    }
+}
