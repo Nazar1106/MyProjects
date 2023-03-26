@@ -1,4 +1,4 @@
-package Birds;
+package TasksFromOleg.Birds;
 /*
 Потрібно створити двох птахів:
 • 1. Орел
