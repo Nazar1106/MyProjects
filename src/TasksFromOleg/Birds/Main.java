@@ -1,7 +1,7 @@
-package Birds;
+package TasksFromOleg.Birds;
 
-import static Birds.TypeBird.BADBIRD;
-import static Birds.TypeBird.KINDBIRD;
+import static TasksFromOleg.Birds.TypeBird.BADBIRD;
+import static TasksFromOleg.Birds.TypeBird.KINDBIRD;
 
 public class Main {
     public static void main(String[] args) {

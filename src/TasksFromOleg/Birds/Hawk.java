@@ -1,4 +1,4 @@
-package Birds;
+package TasksFromOleg.Birds;
 
 public class Hawk extends Birds implements Fly {
     String hawColor;
@@ -7,10 +7,9 @@ public class Hawk extends Birds implements Fly {
         this.hawColor = hawColor;
     }
     @Override
-    public Integer flyBirds() {
-        Integer speed = 10*4;
+    public void flyBirds() {
+        int speed = 10*4;
         System.out.println("Hawk's speed = "+speed+".");
-        return speed;
     }
     @Override
     public void eatMice() {

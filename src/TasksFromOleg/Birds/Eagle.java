@@ -1,4 +1,4 @@
-package Birds;
+package TasksFromOleg.Birds;
 
 public class Eagle extends Birds implements Fly {
     public Eagle(String name, int age, String eyes, TypeBird typeBird) {
@@ -13,9 +13,8 @@ public class Eagle extends Birds implements Fly {
                 ", typeBird = " + typeBird+ ".";
     }
     @Override
-    public Integer flyBirds() {
-        Integer speed = 10*2;
+    public void flyBirds() {
+        int speed = 10*2;
         System.out.println("Eagle's speed = "+speed+".");
-        return speed;
     }
 }
