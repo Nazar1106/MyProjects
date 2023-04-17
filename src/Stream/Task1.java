@@ -25,7 +25,7 @@ public class Task1 {
                 .forEach(System.out::println);
     }
     private static void FindAverageAge(Collection<Student> students) { //Find men's AverageAge
-        System.out.println("average men's age is:");
+        System.out.println("average age men's is:");
         double st = students.stream()
                 .filter((s) -> s.getGender() == Gender.MAN)
                 .mapToInt(Student::getAge)
