@@ -1,7 +1,9 @@
 package TasksFromOleg;
+
 import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Scanner;
+
 /*
 Кінотеатр.
 Створити систему бронювання в кінотеатрі:
@@ -40,9 +42,11 @@ public class Cinema {
         showMenu();
         showAndReservedPlaces();
     }
+
     private static void showMenu() {
         System.out.println("Menu:");
     }
+
     private static void showAndReservedPlaces() {
         Scanner scan = new Scanner(System.in);
         LinkedList<Boolean> seats = new LinkedList<>();
