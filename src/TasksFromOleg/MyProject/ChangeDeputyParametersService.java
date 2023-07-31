@@ -3,7 +3,7 @@ package TasksFromOleg.MyProject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ChangeDeputyParameters implements ChangeInterface {
+public class ChangeDeputyParametersService implements ChangeInterface {
     public void methodForChange(ArrayList<Deputies> deputiesArrayList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""

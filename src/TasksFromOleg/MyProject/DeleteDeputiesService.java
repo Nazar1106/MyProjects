@@ -3,7 +3,7 @@ package TasksFromOleg.MyProject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DeleteDeputies {
+public class DeleteDeputiesService {
     public void methodForDelete(ArrayList<Deputies> deputiesArrayList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write your name for delete deputy:");

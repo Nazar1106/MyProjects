@@ -1,28 +1,22 @@
 package TasksFromOleg.MyProject;
 
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 /*
 Програма.
 Тобі потрібно написати програму, яка буди виконувати наступні функції:
-
-1) зберегти депутата +
+1) зберегти депутата - Done;
 Коли натискаєш 1 ти маєш змогу зберегти депутата;
 Депутат має такі параметри:
 - Прізвище;
 - Вік;
 - Хабарник (так або ні);
-
-2) Показати всіх депутатів:
-Програма має вивести всіх існуючих депутатів яких ти додавав;
-
-3) видалити депутата по прізвищу:
+2) Показати всіх депутатів: - Done;
+Програма має вивести всіх що існує депутатів яких ти додавав;
+3) видалити депутата по прізвищу: - Done;
 Вводиш прізвище депутата, якщо такий депутат є, його має видалити зі списку, якщо не нема, програма має вибити
 такого депутата не існує;
-
-4) змінити параметри в депутаті:
+4) змінити параметри в депутаті: - Done;
 Вводиш прізвище депутата, якщо такий депутат є програма має запитати, які параметри ви хочете змінити:
 - Прізвище;
 - Вік;
@@ -30,18 +24,34 @@ import java.util.Scanner;
 Ти наприклад набираєш 2 і там має писати "введіть новий вік";
 Ти вводиш наприклад було 30, а ти вводиш 35 і воно має йому поміняти;
 І так можна міняти любий його параметр;
-
-5) видалити всіх депутатів, Програма має видалити всіх депутатів які існують;
+5) видалити всіх депутатів, Програма має видалити всіх депутатів які існують; - Done;
+6) Add additionally:
+- додати функцію яка буде сортувати депутатів по алфавіту; - Done;
+- заборонити додавати однакових депутатів за прізвищем до списку; - Done;
+- додати функцію, яка буде вказувати дату з годиною коли був доданий депутат; - Done;
+- Якщо депутат хабарник тоді додати суму хабарю - якщо ця сума перевищує 100 тисяч$ тоді показати, що він був впійманий; - Done;
  */
 public class Deputies {
     private String surname;
     private int age;
     private boolean grafter;
+    private Date date;
 
-    public Deputies(String surname, int age, boolean grafter) {
+    private int amountBribe;
+
+    public Deputies(String surname, int age, boolean grafter, Date date, int amountBribe) {
         this.surname = surname;
         this.age = age;
         this.grafter = grafter;
+        this.date = date;
+        this.amountBribe = amountBribe;
+    }
+
+    public Deputies(String surname, int age, boolean grafter, Date date) {
+        this.surname = surname;
+        this.age = age;
+        this.grafter = grafter;
+        this.date = date;
     }
 
     public String getSurname() {
@@ -68,25 +78,42 @@ public class Deputies {
         this.grafter = grafter;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getAmountBribe() {
+        return amountBribe;
+    }
+
+    public void setAmountBribe(int amountBribe) {
+        this.amountBribe = amountBribe;
+    }
+
     @Override
     public String toString() {
         return "Deputy:" +
                 "Surname:" + surname +
                 ",Age:" + age +
-                ",Grafter:" + grafter + ";";
+                ",Grafter:" + grafter +
+                ",Date:" + date +
+                ",amountBribe:" + amountBribe + ";";
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Deputies that = (Deputies) o;
-        return age == that.age && grafter == that.grafter && Objects.equals(surname, that.surname);
+        Deputies deputies = (Deputies) o;
+        return age == deputies.age && grafter == deputies.grafter && amountBribe == deputies.amountBribe && Objects.equals(surname, deputies.surname) && Objects.equals(date, deputies.date);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(surname, age, grafter);
+        return Objects.hash(surname, age, grafter, date, amountBribe);
     }
 }
