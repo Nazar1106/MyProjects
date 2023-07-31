@@ -39,41 +39,9 @@ public class SaveDeputiesService implements SaveInterface {
                 }
             }
         }
-
-        //  arrayList.stream().distinct().forEach((e) -> System.out.println("Sorry"));
-
-
-//
-//        if (deputiesPredicate.test(arrayList)) {
-//            //Deputies deputies1 = new Deputies(surname, age, grafter);
-//
-//            arrayList.add(deputies1);
-//        } else {
-//            System.out.println("sorry");
-//        }
-
     }
-
 }
-//
-//  if (!arrayList.removeIf((e) -> e.getSurname().contains(surname))) {
-//          Deputies deputies1 = new Deputies(surname, age, grafter);
-//          arrayList.add(deputies1);
-//          } else {
-//          System.out.println("sorry");
-//          }
 
-
-//    arrayList.removeIf((e) -> e.getSurname().equals(surname));
-
-
-//        for (Deputies deputies : arrayList) {
-//            if (deputies.getSurname().equals(surname)) {
-//
-//            } else {
-//                System.out.println("Parliament can't store two same deputies!");
-//            }
-//        }
 
 
 
