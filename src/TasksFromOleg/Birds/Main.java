@@ -4,7 +4,7 @@ import static TasksFromOleg.Birds.TypeBird.BADBIRD;
 import static TasksFromOleg.Birds.TypeBird.KINDBIRD;
 
 public class Main {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Hawk hawk = new Hawk("Fantom", 3, "Black", BADBIRD, "gray");
         Eagle eagle = new Eagle("Siri", 4, "Black", KINDBIRD);
         System.out.println(hawk);

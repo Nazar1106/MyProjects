@@ -24,3 +24,4 @@ public class Hawk extends Birds implements Fly {
                 ", hawColor = " + hawColor+".";
     }
 }
+
